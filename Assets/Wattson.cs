@@ -13,7 +13,7 @@ public class Wattson : MonoBehaviour
     }
 
     public void Down() 
-    { 
-        anim.SetBool
+    {
+        /*anim.SetBool;*/
     }
 }
