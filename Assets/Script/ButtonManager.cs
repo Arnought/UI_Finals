@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    private bool isFaded = false;
+    /*private bool isFaded = false;
     public float fadeDuration = 1.0f;
     public Transform modelTransform;
 
@@ -21,7 +21,7 @@ public class ButtonManager : MonoBehaviour
 
             isFaded = !isFaded;
         }
-    }
+    }*/
 
     public void Quit()
     {
