@@ -5,18 +5,14 @@ using UnityEngine;
 public class HairColorChanger : MonoBehaviour
 {
     public List<Texture> hairTextureList;
+    public List<Texture> bodyTextureList;
     public Material hairMaterial;
-
-    private void Update()
-    {
-        ChangeHairColor();
-    }
+    public Material bodyMaterial;
 
     public void ChangeHairColor()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            int currentHairTextureIndex = hairTextureList.IndexOf(hairMaterial.mainTexture);
+        
+           int currentHairTextureIndex = hairTextureList.IndexOf(hairMaterial.mainTexture);
 
             currentHairTextureIndex++;
 
@@ -25,6 +21,15 @@ public class HairColorChanger : MonoBehaviour
                 currentHairTextureIndex = 0;
             }
             hairMaterial.mainTexture = hairTextureList[currentHairTextureIndex];
+
+            
+            int changeBodyTextureIndex = bodyTextureList.IndexOf(bodyMaterial.mainTexture);
+            changeBodyTextureIndex++;
+
+        if (changeBodyTextureIndex >= bodyTextureList.Count)
+        {
+            changeBodyTextureIndex = 0;
         }
+        bodyMaterial.mainTexture = bodyTextureList[changeBodyTextureIndex];
     }
 }
